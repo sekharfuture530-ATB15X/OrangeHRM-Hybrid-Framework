@@ -1,0 +1,37 @@
+[
+  {
+    "testCase"       : "TC_DDT_001",
+    "username"       : "Admin",
+    "password"       : "admin123",
+    "expectedResult" : "pass",
+    "description"    : "Valid admin credentials — should land on Dashboard"
+  },
+  {
+    "testCase"       : "TC_DDT_002",
+    "username"       : "Admin",
+    "password"       : "wrongPassword",
+    "expectedResult" : "fail",
+    "description"    : "Valid username, wrong password — should show error"
+  },
+  {
+    "testCase"       : "TC_DDT_003",
+    "username"       : "invalidUser",
+    "password"       : "admin123",
+    "expectedResult" : "fail",
+    "description"    : "Invalid username, valid password — should show error"
+  },
+  {
+    "testCase"       : "TC_DDT_004",
+    "username"       : "invalidUser",
+    "password"       : "invalidPass",
+    "expectedResult" : "fail",
+    "description"    : "Both credentials invalid — should show error"
+  },
+  {
+    "testCase"       : "TC_DDT_005",
+    "username"       : "Admin",
+    "password"       : "Admin123",
+    "expectedResult" : "fail",
+    "description"    : "Case-sensitive password test — should fail (wrong case)"
+  }
+]

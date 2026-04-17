@@ -1,0 +1,36 @@
+# OrangeHRM Hybrid Test Automation Framework — .gitignore
+
+# ── Maven build output ────────────────────────────────────────────────────────
+target/
+*.class
+
+# ── Test output (generated at runtime — never commit these) ──────────────────
+test-output/
+surefire-reports/
+allure-results/
+allure-report/
+
+# ── IDE files ─────────────────────────────────────────────────────────────────
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.eclipse
+
+# ── WebDriver Manager cache ───────────────────────────────────────────────────
+.wdm/
+
+# ── OS-generated ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Sensitive data ────────────────────────────────────────────────────────────
+# Never commit real credentials or environment-specific configs
+# Use CI/CD secrets or vault integrations instead
+src/main/resources/config/prod.properties
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/

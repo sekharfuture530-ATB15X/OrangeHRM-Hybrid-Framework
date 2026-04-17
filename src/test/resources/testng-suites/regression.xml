@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  REGRESSION SUITE — runs all login + future module tests.
+  Triggered nightly or on release branches.
+  Parallel: tests run in parallel at method level with 3 threads.
+-->
+<suite name="OrangeHRM - Regression Suite"
+       verbose="2"
+       parallel="methods"
+       thread-count="3">
+
+    <listeners>
+        <listener class-name="com.orangehrm.listeners.TestListener"/>
+    </listeners>
+
+    <!-- ── Login Module ──────────────────────────────── -->
+    <test name="Login Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.orangehrm.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- ── Future: Add more modules here ─────────────── -->
+    <!--
+    <test name="PIM Module Tests">
+        <classes>
+            <class name="com.orangehrm.tests.PimTest"/>
+        </classes>
+    </test>
+    -->
+
+</suite>
